@@ -30,9 +30,9 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  /* background-image: url("../src/assets/images/background.jpg");
-  background-position: center;
-  background-repeat: no-repeat; */
+  background-image: url("../src/assets/images/background.jpg");
+  background-position: contain;
+  background-repeat: no-repeat;
 }
 
 h1 {

@@ -3,6 +3,7 @@ import Projects from "./components/Projects/Projects";
 import About from "./components/About/About";
 import Home from "./components/Home/Home";
 import NavBar from "./components/Navbar/NavBar";
+import Contact from "./components/Contact/Contact";
 import "./App.css";
 
 import PROJECTS from "./projects";
@@ -14,7 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects projects={PROJECTS} />} />
-        {/* <Route path="/connect" element={<Connect />} /> */}
+        <Route path="/Contact" element={<Contact />} />
       </Routes>
       <NavBar />
     </>
