@@ -5,16 +5,17 @@ export default function Contact() {
   const formRef = useRef();
   const [status, setStatus] = useState("");
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
   const sendEmail = (e) => {
     e.preventDefault();
     setStatus("Loading");
 
     emailjs
-      .sendForm("SERVICE_ID", "TEMPLATE_ID", formRef.current, "PUBLIC_KEY")
+      .sendForm(
+        "service_bnhq81a",
+        "template_b487f64",
+        formRef.current,
+        "sj2y9QvIJImV8Rms1"
+      )
       .then(
         (res) => {
           setStatus("Message sent!");
@@ -43,7 +44,7 @@ export default function Contact() {
             name="user_name"
             placeholder="Your Name"
             required
-            className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="text-black border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
         <div>
@@ -53,7 +54,7 @@ export default function Contact() {
             name="user_email"
             placeholder="Your Email"
             required
-            className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="text-black border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
 

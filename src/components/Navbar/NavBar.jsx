@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
-const linkClasses = "text-white hover:text-amber-200 focus:text-blue-500";
+const linkClasses = "text-white focus:text-red-500";
 
 export default function NavBar() {
   return (
-    <div className="w-full fixed top-0 z-50 justify-center right-0.5">
+    <div className="bg-black w-full fixed top-0 z-50 justify-center right-0.5">
       <nav className="inline-flex justify-center py-4">
         <ul className="flex gap-8">
           <li>
@@ -23,7 +23,7 @@ export default function NavBar() {
             </Link>
           </li>
           <li>
-            <Link to="contact" className={linkClasses}>
+            <Link to="/contact" className={linkClasses}>
               CONTACT
             </Link>
           </li>
