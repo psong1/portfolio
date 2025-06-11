@@ -19,8 +19,8 @@ export default function Links() {
   return (
     <div className="inline-flex block">
       {links &&
-        links.map((link) => (
-          <div className="flex justify-center px-4">
+        links.map((link, idx) => (
+          <div key={idx} className="flex justify-center px-4">
             <a
               className=" bg-white rounded-md  gap-2 mt-4"
               target="_blank"
