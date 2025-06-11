@@ -11,10 +11,10 @@ import PROJECTS from "./projects";
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div>
       <NavBar />
       <ParticlesBackground />
-      <main className="pt-16">
+      <main className="pt-16 w-full">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
