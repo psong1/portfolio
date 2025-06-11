@@ -31,52 +31,54 @@ export default function Contact() {
 
   return (
     <div className="max-w-lg mx-auto py-12 px-4">
-      <h2 className="text-2xl font-bold mb-6 text-center">Contact Me</h2>
+      <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white">
+        Contact Me
+      </h2>
       <form
         ref={formRef}
         onSubmit={sendEmail}
-        className="bg-white shadow-md rounded-lg p-8 flex flex-col gap-4"
+        className="bg-black/50 backdrop-blur-sm shadow-lg rounded-lg p-8 flex flex-col gap-6"
       >
-        <div>
-          <span className="text-black font-bold mr-6">Name</span>
+        <div className="flex flex-col gap-2">
+          <label className="text-white font-medium">Name</label>
           <input
             type="text"
             name="user_name"
             placeholder="Your Name"
             required
-            className="text-black border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="bg-white/10 border border-gray-600 rounded-md px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </div>
-        <div>
-          <span className="text-black font-bold mr-6">Email</span>
+        <div className="flex flex-col gap-2">
+          <label className="text-white font-medium">Email</label>
           <input
             type="email"
             name="user_email"
             placeholder="Your Email"
             required
-            className="text-black border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="bg-white/10 border border-gray-600 rounded-md px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </div>
 
-        <div className="inline-flex justify-center">
-          <span className="text-black font-bold mr-4">Message</span>
+        <div className="flex flex-col gap-2">
+          <label className="text-white font-medium">Message</label>
           <textarea
             name="message"
             placeholder="Your Message"
             required
             rows={5}
-            className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+            className="bg-white/10 border border-gray-600 rounded-md px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </div>
 
         <button
           type="submit"
-          className="bg-blue-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700 transition-colors"
+          className="bg-blue-600 text-white font-semibold py-3 rounded-md hover:bg-blue-700 transition-colors duration-200"
         >
           Send Message
         </button>
         {status && (
-          <p className="text-center mt-2 text-sm text-gray-600">{status}</p>
+          <p className="text-center mt-2 text-sm text-gray-300">{status}</p>
         )}
       </form>
     </div>
