@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --repo git@github.com:psong1/portfolio.git"
+    "deploy": "gh-pages -d dist --dotfiles --repo https://github.com/psong1/portfolio.git"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
