@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import Links from "./Links.jsx";
 
 export default function Contact() {
   const formRef = useRef();
@@ -20,11 +21,9 @@ export default function Contact() {
         (res) => {
           setStatus("Message sent!");
           formRef.current.reset();
-          console.log(res);
         },
         (err) => {
           setStatus("Failed to send message. Please try again.");
-          console.error(err);
         }
       );
   };
@@ -81,6 +80,8 @@ export default function Contact() {
           <p className="text-center mt-2 text-sm text-gray-300">{status}</p>
         )}
       </form>
+
+      <Links />
     </div>
   );
 }
