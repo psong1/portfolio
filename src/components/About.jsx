@@ -16,7 +16,7 @@ function AboutMe() {
               <img
                 key={idx}
                 src={image}
-                className="w-[300px] h-[450px] rounded-lg mb-2"
+                className="w-[300px] h-[450px] object-cover object-center rounded-lg mb-2"
               />
             ))}
         </div>

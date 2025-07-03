@@ -3,9 +3,9 @@ import headshotImg from "../assets/images/headshot.png";
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] p-8">
-      <div className="w-[300px] h-[360px] md:w-[400px] md:h-[500px] rounded-full overflow-hidden">
+      <div className="w-full h-full md:w-[400px] md:h-[500px] rounded-full overflow-hidden">
         <img
-          className="w-full h-full object-center"
+          className="w-full h-full object-cover object-center"
           src={headshotImg}
           alt="My professional headshot"
         />
