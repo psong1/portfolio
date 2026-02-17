@@ -12,13 +12,11 @@ export default function NavBar() {
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
-    // Prefer IntersectionObserver for reliable section tracking
     const sections = navItems
       .map((item) => document.getElementById(item.id))
       .filter(Boolean);
 
     if (!("IntersectionObserver" in window) || sections.length === 0) {
-      // Fallback to scroll handler if IntersectionObserver is not available
       const handleScroll = () => {
         const viewportCenter = window.innerHeight / 2;
 
@@ -44,7 +42,6 @@ export default function NavBar() {
 
     const observer = new IntersectionObserver(
       (entries) => {
-        // Pick the section with the greatest visible area
         const visibleEntries = entries.filter((e) => e.isIntersecting);
         if (!visibleEntries.length) return;
 
@@ -58,7 +55,6 @@ export default function NavBar() {
         }
       },
       {
-        // Trigger updates as visibility changes
         threshold: [0.25, 0.5, 0.75],
       },
     );
