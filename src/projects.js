@@ -4,6 +4,7 @@ import reactLogo from "./assets/images/react-logo.png";
 import nodeLogo from "./assets/images/node-logo.png";
 import expressLogo from "./assets/images/express-js.png";
 import sequelize from "./assets/images/sequelize.png";
+import springBootLogo from "./assets/images/sb-logo.svg";
 
 const PROJECTS = [
   {
@@ -24,6 +25,16 @@ const PROJECTS = [
       This application will be beneficial for those that want to train on a track, but do not know if they are available to the public.",
     images: [mysqlLogo, sequelize, reactLogo, nodeLogo, expressLogo],
     link: "https://github.com/psong1/track-finder",
+  },
+  {
+    name: "Lord Byron's Enterprises",
+    tech: ["Java", "MySQL", "Spring Boot", "React"],
+    description:
+      "An e-commerce data solution for a small business in Eleuthera, Bahamas, which allows them to manage their inventory, sales, customers, and employess. \
+      This user-friendly application is designed for their specific workflow and staff. It incorporates features such as role-based access control, inventory management, sales tracking, \
+      and customer management.",
+    images: [javaLogo, mysqlLogo, springBootLogo, reactLogo],
+    link: "https://github.com/psong1/lord-byron-enterprises",
   },
 ];
 

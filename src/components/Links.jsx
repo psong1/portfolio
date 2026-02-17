@@ -22,7 +22,7 @@ export default function Links() {
         links.map((link, idx) => (
           <div key={idx} className="flex justify-center px-4">
             <a
-              className=" bg-white rounded-md  gap-2 mt-4"
+              className=" bg-white rounded-md gap-2 mt-4"
               target="_blank"
               rel="noopener noreferrer"
               href={link.path}
